@@ -1,0 +1,185 @@
+/* == Mobile first == */
+
+body {
+    background-color: #999;
+}
+
+.leftbar {
+    grid-area: leftbar;
+}
+
+.rightbar {
+    grid-area: rightbar;
+}
+  
+.content {
+    grid-area: content;
+}
+
+.header {
+    grid-area: header;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.box {
+    background-color: rgb(223, 223, 189);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas:
+    "header header"
+    "content content"
+    "leftbar rightbar"
+    "footer footer";
+    background-color: #999;
+    color: #444;
+}
+
+p {
+    text-indent: 2em;
+    text-align: justify;
+}
+
+.wrapper p:last-child, aside p:last-of-type {
+    text-align: center;
+    text-indent: 0;
+}
+
+.img {
+    width: 100%;
+}
+
+aside {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+h2, aside>p {
+    text-align: center;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #444;
+}
+
+a:hover {
+    color: rgb(88, 114, 198);
+}
+
+.leftbar, .rightbar {
+    padding-left: 2.3em;
+    background-color: rgb(233, 189, 171);
+}
+
+.leftbar p, rightbar p {
+    padding-left: 0px;
+    text-indent: 0;
+    text-align: center;
+}
+
+.header, .footer {
+    background-color: #006115;
+    color: ivory;
+    text-align: center;
+    font-size: 0.7em;
+}
+
+footer a {
+    color: ivory;
+}
+
+p > a:hover, footer a:hover {
+    color: rgb(88, 114, 198);
+}
+
+
+
+
+
+/* mobile landscape */
+ @media screen and (orientation: landscape) {
+   
+    .wrapper {
+        grid-template-areas:
+        "header header header header"
+        "leftbar content content rightbar"
+        "footer footer footer footer";
+    }  
+
+    aside {
+        font-size: 0.8em;
+    }
+
+    aside > li > a {
+        padding: 1em;
+    }
+
+    content {
+        text-indent: 1 em;
+    }
+}
+
+
+/* 480px */
+ @media (max-width: 26.25em) {
+   
+    .wrapper {
+        grid-template-areas:
+        "header header"
+        "content content"
+        "leftbar rightbar"
+        "footer footer";
+    } 
+
+    aside {
+        font-size: 0.7em;
+    }
+
+    aside > li > a {
+        padding: 1em;
+    }
+}
+
+
+/* 1024px */
+ @media (min-width: 64em) {
+   
+    .wrapper {
+        /* grid-template-columns: 4fr; */
+        grid-template-areas:
+        "header header header header"
+        "leftbar content content rightbar"
+        "footer footer footer footer";
+        font-size: 150%;
+    }
+
+    .img {
+        width: 70%;
+        padding-left: 15%;
+    }
+
+    aside {
+        font-size: 80%;
+    }
+
+    aside > li > a {
+        padding: 0.8em;
+    }
+
+    content {
+        text-indent: 1em;
+    }
+}
+
+
+
+
+
